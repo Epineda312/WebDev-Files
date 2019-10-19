@@ -18,6 +18,16 @@ font-size: 4.5rem;
 line-height: 1.5;
 }
 
+h3{
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+p{
+    font-family: "Montserrat-Light";
+    color: #8f8f8f;
+}
 /* Navigation Bar */
 
 .navbar{
@@ -49,3 +59,41 @@ line-height: 1.5;
   width: 60%;
   transform: rotate(25deg);
 }
+
+/* features section */
+#features{
+  padding: 7% 15%;
+}
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+.icon{
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+.icon:hover{
+  color: #ff4c68;
+}
+
+/* Icons */
+/* .fa-check-circle{
+  color: #ef8172;
+}
+.fa-check-circle:hover{
+  color: #ff4c68;
+}
+
+.fa-bullseye{
+  color: #ef8172;
+}
+.fa-bullseye:hover{
+    color: #ff4c68;
+}
+
+.fa-heart{
+  color: #ef8172;
+}
+.fa-heart:hover{
+    color: #ff4c68;
+} */
