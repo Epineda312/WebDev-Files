@@ -47,11 +47,17 @@ alert("You dogAge converted to human years is " + humanAge);
 //------------------------------End Problem 4-------------------------------------//
 
 //------------------------------Start Problem 5-------------------------------------//
-//Create your function below this line.
 
+//Create your function below this line.
 function bmiCalculator(weight, height){
   var bmi = weight/math.pow(height, 2);
-  return bmi;
+  return Math.round(bmi);
+}
+
+//Alt solution
+function bmiCalculator(weight, height){
+  var bmi = weight / (height * height);
+  return Math.round(bmi);
 }
 
 /* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
@@ -59,4 +65,6 @@ function bmiCalculator(weight, height){
 var bmi = bmiCalculator(65, 1.8);
 
 bmi should equal around 20 in this case.*/
+var bmi = bmiCalculator(65, 1.8);
+console.log(bmi);
 //------------------------------End Problem 5-------------------------------------//
