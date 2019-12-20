@@ -126,23 +126,39 @@ var count = 1;
 
 function fizzBuzz(){
 //write code here
-
-if(count % 3 === 0 && count % 5 === 0 ) {
-  output.push("FizzBuzz");
-}
-else if(count % 3 === 0){
-  output.push("Fizz");
-}
-else if(count % 5 === 0){
-  output.push("Buzz");
-}
-else{
-  output.push(count);
-}
-count++;
-console.log(output)
+while(count <= 100){
+  if(count % 3 === 0 && count % 5 === 0 ) {
+    output.push("FizzBuzz");
+  }
+  else if(count % 3 === 0){
+    output.push("Fizz");
+  }
+  else if(count % 5 === 0){
+    output.push("Buzz");
+  }
+  else{
+    output.push(count);
+  }
+  count++;
+  }
+  console.log(output)
 }
 //------------------------------End Problem 9-------------------------------------//
+//Use a while loop to print out the 99 bottles of beer on the wall song
+var numberOfBottles = 99
+while (numberOfBottles >= 0) {
+    var bottleWord = "bottles";
+    if (numberOfBottles === 1) {
+        bottleWord = "bottle";
+    } else if(numberOfBottles === 0){
+      bottleWord = "bottles"
+    }
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+    console.log("Take one down, pass it around,");
+   numberOfBottles--;
+    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+}
 //------------------------------Start Problem 10-------------------------------------//
 //------------------------------End Problem 10-------------------------------------//
 //------------------------------Start Problem 11-------------------------------------//
