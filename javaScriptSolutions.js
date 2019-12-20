@@ -5,14 +5,12 @@ var tweetCount = tweet.length;
 alert("You have written " + tweetCount + " characters, you have " + (140 - tweetCount) + " characters remaining");
 //------------------------------End Problem 1-------------------------------------//
 
-
 //------------------------------Start Problem 2-------------------------------------//
 //Slices extra characters from tweet after 140 characters
 var tweet = prompt("Compose Your Tweet");
 var tweetUnder140 = tweet.slice(0,140);
 alert(tweetUnder140);
 //------------------------------End Problem 2-------------------------------------//
-
 
 //------------------------------Start Problem 3-------------------------------------//
 //1 Create a var that stores the name that user enters via prompt
@@ -71,11 +69,81 @@ prompt("What is their name?");
 
 var loveScore = Math.random() * 100;
 loveScore = Math.floor(loveScore) + 1;
-alert("Your loveScore is " + loveScore); //1-100
-
-if(loveScore === 100){
-  alert("Your love score is " + loveScore + "%" + "You love each other like Kanye loves Kanye");
-}else {
   alert("Your love score is " + loveScore + "%");
+
+//Greater than seventy
+if(loveScore > 70){
+  alert("Your love score is " + loveScore + "%" +
+        " \nYou love each other like Kanye loves Kanye");
+//Greater than 40, less than or equal to 70
+}if(loveScore > 30 && loveScore <= 70){
+  alert("Your love score is "+ loveScore +"%");
+//Less than equal to thirty
+}if(loveScore <=30){
+  alert("Your love score is "+ loveScore + "%" +
+        " \nSheesh, You go together like oil and water");
 }
 //------------------------------End Problem 6-------------------------------------//
+
+//------------------------------Start Problem 7-------------------------------------//
+//Create a BMI calculator complete with if statements that generate different outputs
+//depending on the BMI
+function bmiCalculator (weight, height) {
+    var bmi = weight/(height * height);
+    var interpretation = "";
+
+    if(bmi < 18.5){
+        interpretation = ("Your BMI is "+ bmi +", so you are underweight.");
+    }
+     if(bmi >= 18.5 && bmi <= 24.9){
+        interpretation = ("Your BMI is "+ bmi +", so you have a normal weight.");
+    }
+     if(bmi > 24.9){
+        interpretation = ("Your BMI is "+ bmi +", so you are overweight.");
+    }
+    return interpretation;
+}
+//------------------------------Start Problem 8-------------------------------------//
+//Create an array of guest names then prompt the user and ask for their name
+//Check guest list to see if the users name is on the list
+var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
+
+var guestName = prompt("What is your name?")
+guestList.includes(guestName);
+
+if(guestList.includes(guestName) == true){
+  alert("Your name is on the guest List");
+}else{
+  alert("Your name is not on the guest list");
+}
+//------------------------------End Problem 8-------------------------------------//
+//------------------------------Start Problem 9-------------------------------------//
+/*Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz"
+instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of
+both three and five print "FizzBuzz"*/
+var output = [];
+var count = 1;
+
+function fizzBuzz(){
+//write code here
+
+if(count % 3 === 0 && count % 5 === 0 ) {
+  output.push("FizzBuzz");
+}
+else if(count % 3 === 0){
+  output.push("Fizz");
+}
+else if(count % 5 === 0){
+  output.push("Buzz");
+}
+else{
+  output.push(count);
+}
+count++;
+console.log(output)
+}
+//------------------------------End Problem 9-------------------------------------//
+//------------------------------Start Problem 10-------------------------------------//
+//------------------------------End Problem 10-------------------------------------//
+//------------------------------Start Problem 11-------------------------------------//
+//------------------------------End Problem 11-------------------------------------//
