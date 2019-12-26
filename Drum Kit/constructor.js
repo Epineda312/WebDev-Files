@@ -4,10 +4,17 @@
 //   cleaningRepertoire: ["bathroom", "lobby", "bedroom"]
 // }
 
+// function clean(){
+//   alert("Cleaning in progress");
+// }
+
 function HouseKeeper (yearsOfExperience, name, cleaningRepertoire){
     this.yearsOfExperience = yearsOfExperience;
     this.name = name;
     this.cleaningRepertoire = cleaningRepertoire;
+    this.clean = function clean(){
+      alert("Cleaning in progress");
+    }
 }
 
 // var bellBoy1 = {
@@ -17,11 +24,22 @@ function HouseKeeper (yearsOfExperience, name, cleaningRepertoire){
 //   languages: ["French", "English"]
 // }
 
+// function moveSuitCase{
+//   alert("May I take your suitcase?");
+//   pickUpSuitcase();
+//   move();
+// }
+
 function BellBoy (name, age, hasWorkPermit, languages){
   this.name = name;
   this.age = age;
   this.hasWorkPermit = hasWorkPermit;
   this.languages = languages;
+  this.moveSuitcase = function(){
+    alert("May I take your suitcase?");
+    pickUpSuitcase();
+    move();
+  }
 }
 
 var BellBoy1 = new BellBoy("Timmy", 19, true, ["French", "English"]);
