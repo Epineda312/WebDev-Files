@@ -59,5 +59,13 @@ document.addEventListener("keydown", function(event){
 }
 
 function buttonAnimation(currentKey){
-  currentButton = document.querySelector("." + currentKey);
+
+  var activeButton = document.querySelector("." + currentKey);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+  }, 100);
+
 }
