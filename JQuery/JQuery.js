@@ -55,3 +55,13 @@
 // $("h1").on("click", function() {
 //   $("h1").css("color", "purple");
 // }); //When h1 is clicked it changes to purple
+
+// $("h1").before("<button>New</button>"); //Makes a new button before opening tag of h1
+
+// $("h1").after("<button>New</button>"); //Makes a new button after the opening tag of h1
+
+// $("h1").prepend("<button>New</button>") //Adds button inside h1 but before content of h1
+
+// $("h1").append("<button>New</button>") //Adds button inside h1 but after content of h1
+
+// $("button").remove(); //Removes all buttons from document
