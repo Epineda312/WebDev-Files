@@ -65,3 +65,37 @@
 // $("h1").append("<button>New</button>") //Adds button inside h1 but after content of h1
 
 // $("button").remove(); //Removes all buttons from document
+
+// $("button").on("click", function() {
+//   $("h1").hide();
+// }); //Hides h1 when button is clicked
+
+// $("h1").show(); // Makes h1 reappear again
+
+// $("button").on("click", function(){
+//   $("h1").toggle();
+// }); //Each click of a button switches the h1 from hiding and being shown
+
+// $("button").on("click", function(){
+//   $("h1").fadeOut();
+// }); //Cause h1 to fade out instead of disappearing instantly
+
+// $("button").on("click", function(){
+//   $("h1").fadeToggle();
+// }); //Causes h1 to fade out and fade in with each button click
+
+// $("button").on("click", function(){
+//   $("h1").slideUp();
+// }); //Cause h1 to collapes on button clicked
+
+// $("button").on("click", function(){
+//   $("h1").slideToggle();
+// }); //causes h1 to slide up and down on each button click
+
+// $("button").on("click", function(){
+//   $("h1").animate({opacity: 0.5});
+// }); //Can call custom css rules with a numeric value using animate. Causes h1 to become half of its normal color.
+
+// $("button").on("click", function(){
+//   $("h1").slideUp().slideDown().animate({opacity: 0.5});
+// }); //Does all three methods than fades (slideUp, slideDown, fade)
