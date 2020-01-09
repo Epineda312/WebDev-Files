@@ -28,19 +28,21 @@ var result = num1 + num2;
 app.listen(3000, function(){
   console.log("Server now listening on port 3000");
 });
+
 //------------------------BMI CALCULATOR--------------------------
 
-app.get("/bmiCalculator", function(req, res /*request, response*/) {
+app.get("/bmiCalculator", function(req, res) {
   res.sendFile(__dirname + "/bmiCalculator.html");
 });
 
 app.post("/bmiCalculator", function(req, res){
+  //Variables
+  var weight = parseFloat(req.body.weight);
+  var height = parseFloat(req.body.height);
 
-var weight = Number(req.body.n3);
-var height = Number(req.body.n4);
+  //logic
+  var bmi = weight / (height * height);
 
-var bmi = weight / (height * height);
-
-
+  //Return result
   res.send("Your BMI is " + bmi);
 });

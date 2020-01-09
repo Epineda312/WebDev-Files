@@ -5,33 +5,13 @@
     <title>BMI Calculator</title>
   </head>
   <body>
+
     <h1>BMI Calculator</h1>
     <form action="/bmiCalculator" method="post">
-      <input type="text" name="n3" value="Please enter you weight">
-      <input type="text" name="n4" value="Please enter you height">
+      <input type="text" name="weight" value="Weight">
+      <input type="text" name="height" value="Height">
       <button type="submit" name="button">Calculate BMI</button>
-
     </form>
-    <!-- <form action="/" method="post">
 
-      <input type="text" name="n1" value="First Number">
-      <input type="text" name="n2" value="Second Number">
-      <button type="submit" name="button">Calculate</button>
-
-      function bmiCalculator(weight, height){
-        var bmi = weight/math.pow(height, 2);
-        return bmi;
-      }
-      //Alt solution
-      function bmiCalculator(weight, height){
-        var bmi = weight / (height * height);
-        return Math.round(bmi);
-      }
-      /* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
-      var bmi = bmiCalculator(65, 1.8);
-      bmi should equal around 20 in this case.*/
-      var bmi = bmiCalculator(65, 1.8);
-      console.log(bmi);
-    </form> -->
   </body>
 </html>
