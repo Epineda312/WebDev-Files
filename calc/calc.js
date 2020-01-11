@@ -10,9 +10,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Home Route
 app.get("/", function(req, res /*request, response*/) {
+  
   //res.send("Hello User");
   res.sendFile(__dirname + "/index.html");
+  
+  //Sends directory to the console
   // console.log(__dirname);
+  
 });
 
 app.post("/", function(req, res){
