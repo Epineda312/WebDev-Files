@@ -17,7 +17,12 @@ app.post("/", function(req, res){
   // console.log(req.body.crypto);
 
   request("https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD", function(error, response, body){
-    console.log(response.statusCode);
+
+    var data = JSON.parse(body);
+    var price = data.averages.week;
+
+    res.send("<h1>The price of bitcoin is "+ price +" USD</h1>");
+    
   });
 
 });
