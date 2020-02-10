@@ -15,8 +15,8 @@ app.get("/", function(req, res){
     res.write("<h1>Yay it's the weekend</h1>");
     res.send();
   } else{
-    res.write("<h1>Boo! I have to work!</");
-    res.send();
+      res.sendFile(__dirname + "/index.html");
+
   }
 });
 
