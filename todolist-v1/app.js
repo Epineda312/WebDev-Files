@@ -8,8 +8,8 @@ const date = require(__dirname + "/date.js");
 
 const app = express();
 
-let items = ["Buy Food", "Cook Food", "Eat Food"];
-let workItems = [];
+const items = ["Buy Food", "Cook Food", "Eat Food"];
+const workItems = [];
 
 app.set('view engine', 'ejs');
 
@@ -18,13 +18,13 @@ app.use(express.static("public"));
 
 app.get("/", function(req, res) {
 
-  let day = date.getDay();
+  const day = date.getDate();
 
   res.render("list", {listTitle: day, newListItems: items});
 });
 
 app.post("/", function(req, res){
-   let item =  req.body.newItem
+   const item =  req.body.newItem
 
    if(req.body.list === "Work") {
      workItems.push(item);
@@ -41,7 +41,7 @@ app.post("/", function(req, res){
   });
 
   app.post("/work", function(req,res){
-    let item = req.body.newItem;
+    const item = req.body.newItem;
     workItems.push(item);
     res.redirect("/work");
   });
