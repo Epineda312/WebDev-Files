@@ -55,7 +55,7 @@ const insertDocuments = function(db, callback) {
 
 const findDocuments = function(db, callback){
   //Get the documents collection
-  const colelction = db.collection = db.collection('fruits');
+  const collection = db.collection = db.collection('fruits');
   //find some documents
   collection.find({}).toArray(function(err, docs){
     assert.equal(err, null);
