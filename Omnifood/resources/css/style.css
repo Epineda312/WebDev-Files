@@ -39,7 +39,6 @@ html{
 .row {
     max-width: 1140px;
     margin: 0 auto;  
-    text-align: center;
 }
 
 section{
@@ -256,6 +255,17 @@ header{
     margin-bottom: 30px;
 }
 
+.section-features i {
+    text-align: center;
+}
+
+.section-features h3{
+    text-align: center;
+}
+.section-features{
+    text-align: center
+}
+
 /*--------------------------------------------------------------*/
 /*MEALS*/
 /*--------------------------------------------------------------*/
@@ -365,6 +375,9 @@ header{
     margin-bottom: 5px;
 }
 
+.section-cities h3{
+    text-align: center;
+}
 
 /*--------------------------------------------------------------*/
 /*TESTIMONIALS*/
