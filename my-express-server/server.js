@@ -13,7 +13,7 @@ app.get("/contact", function(req, red){
 });
 
 app.get("/about", function(req, res){
-    res.send("My name is Eric Pineda, I love Music code and video games");
+    res.send("My name is Eric Pineda, I love Music, coding, and video games");
 });
 
 app.get("/hobbies", function(req, res){
