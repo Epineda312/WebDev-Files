@@ -8,8 +8,12 @@ const search = prompt('Search for a product.');
 let message;
 
 //Runs if block to display if we do or do not have that product
-if ( inStock.includes(search) ) {
-  message = `Yes, we have <strong> ${search}</strong>.`; 
+//Use .toLowerCase() on search to avoid issues with casing
+if( !search ) {
+  message = `<strong>In stock:</strong> ${inStock.join(', ')}`;
+} else if ( inStock.includes(search.toLowerCase()) ) {
+  message = `Yes, we have <strong> ${search}</strong>. It's #${inStock.indexOf(search.toLowerCase()) + 1} on the list!`;
+  
 } else {
   message = `Sorry, we do not have <strong>${search}</strong>. `; 
 }
