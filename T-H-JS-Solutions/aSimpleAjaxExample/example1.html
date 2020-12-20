@@ -9,10 +9,15 @@
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'sidebar.html');
   xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      document.getElementById('ajax').innerHTML = xhr.responseText;
-    }
+    if (xhr.readyState === 4){
+      if(xhr.status === 200){
+        document.getElementById('ajax').innerHTML = xhr.responseText;
+        } else {
+            alert(xhr.statusText);
+        }
+     } 
   };
+ xhr.open('GET', 'missing.html');
   xhr.send();
   </script>
 </head>
@@ -31,3 +36,30 @@
   </div>
 </body>
 </html>
+
+<!--
+examples of error handling
+} else if (xhr.status === 404){
+         //file not found
+} else if (chr.status === 500) {
+       //server had a problem processing request
+}-->
+
+
+<!--
+1.Add a conditional statement inside the onreadystatechange event handler that tests to make sure the server has sent back its complete response.
+2.In the conditional statement you just created, also test to make sure the return status from the server is OK.
+3.Now that the server has responded with the data, you need to add it to the page. First select the div with the ID of 'sidebar'. You can select page elements with IDs like this: document.getElementById('idName');
+4.Now use a DOM element's innerHTML property to set the HTML inside the sidebar div to the server's response.
+
+---practice problem 1 final solution
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+if(xhr.readyState === 4 ){
+  if(xhr.status === 200 ){
+     document.getElementById('sidebar').innerHTML = xhr.responseText;
+  }
+}
+};
+xhr.open('GET', 'sidebar.html');
+xhr.send();-->
