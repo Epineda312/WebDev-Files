@@ -23,18 +23,18 @@ var roomRequest = new XMLHttpRequest();
 roomRequest.onreadystatechange = function () {
   if(roomRequest.readyState === 4 && roomRequest.status === 200) {
     var rooms = JSON.parse(roomRequest.responseText);
-    var statusHTML2 = '<ul class="bulleted">';
+    var statusHTML = '<ul class="rooms">';
     for (var i=0; i<rooms.length; i += 1) {
       if (rooms[i].available === true) {
-        statusHTML2 += '<li class="in">';
+        statusHTML += '<li class="empty">';
       } else {
-        statusHTML2 += '<li class="out">';
+        statusHTML += '<li class="full">';
       }
-      statusHTML2 += rooms[i].room;
-      statusHTML2 += '</li>';
+      statusHTML += rooms[i].room;
+      statusHTML += '</li>';
     }
-    statusHTML2 += '</ul>';
-    document.getElementById('roomList').innerHTML = statusHTML2;
+    statusHTML += '</ul>';
+    document.getElementById('roomList').innerHTML = statusHTML;
   }
 };
 roomRequest.open('GET', '../data/rooms.json');
