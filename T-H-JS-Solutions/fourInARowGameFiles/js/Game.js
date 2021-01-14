@@ -20,7 +20,7 @@ class Game{
      */
     createPlayers(){
             const players = [new Player('Player1', 1, '#e15258', true),
-                             new Player('Player2', 2, 'e#59a13')];
+                             new Player('Player2', 2, '#e59a19')];
        
         return players;
     }
@@ -34,7 +34,7 @@ class Game{
         this.ready = true;
     };
 
-  /**
+     /**
      * Branches code, depending on what key player presses
      * @param   {Object}    e - Keydown event object
      */
@@ -51,9 +51,9 @@ class Game{
     }
 
     playToken(){
-        const spaces = this.board.spaces;
-        const activeToken = this.activePlayer.activeToken;
-        const targetColumn = spaces[activeToken.columnLocation];
+        let spaces = this.board.spaces;
+        let activeToken = this.activePlayer.activeToken;
+        let targetColumn = spaces[activeToken.columnLocation];
         let targetSpace = null;
 
         for (let space of targetColumn) {
@@ -63,8 +63,113 @@ class Game{
         }
 
         if (targetSpace !== null){
-            Game.ready = false;
-            activeToken.drop(targetSpace);
+            game.ready = false;
+
+            activeToken.drop(targetSpace, function(){
+                //callback function code
+                game.updateGameState(activeToken, targetSpace);
+            });
         }
     }
+
+    /** 
+     * Switches active player. 
+    */
+   switchPlayers(){
+        for (let player of this.players){
+            player.active = player.active === true ? false : true;
+        }
+    }
+   
+
+    /** 
+     * Displays game over message.
+     * @param {string} message - Game over message.      
+     */
+    gameOver(message){
+        document.getElementById('game-over').style.display = 'block';
+        document.getElementById('game-over').textContent = message;
+    }
+
+    /** 
+     * Checks if there a winner on the board after each token drop.
+     * @param   {Object}    Targeted space for dropped token.
+     * @return  {boolean}   Boolean value indicating whether the game has been won (true) or not (false)
+     */
+    checkForWin(target){
+        const owner = target.getOwner();
+        let win = false;
+
+        //vertical
+        for (let x = 0; x < this.board.columns; x++){
+            for (let y = 0; y < this.board.rows - 3; y++){
+                if (this.board.spaces[x][y].getOwner() === owner &&
+                    this.board.spaces[x][y+1].getOwner()  === owner &&
+                    this.board.spaces[x][y+2].getOwner()  === owner &&
+                    this.board.spaces[x][y+3].getOwner()  === owner) {
+                        win = true;
+                    }
+            }
+        }
+
+        //horizontal
+        for (let x = 0; x < this.board.columns - 3; x++){
+            for (let y = 0; y < this.board.rows; y++){
+                if (this.board.spaces[x][y].getOwner()  === owner &&
+                    this.board.spaces[x+1][y].getOwner()  === owner &&
+                    this.board.spaces[x+2][y].getOwner()  === owner &&
+                    this.board.spaces[x+3][y].getOwner()  === owner){
+                        win = true;
+                    }
+            }
+        }
+        //diagonal
+        for(let x = 3; x < this.board.columns; x++){
+            for(let y = 0; y < this.board.rows - 3; y++){
+                if(this.board.spaces[x][y].getOwner()  === owner &&
+                   this.board.spaces[x-1][y+1].getOwner()  === owner &&
+                   this.board.spaces[x-2][y+2].getOwner()  === owner &&
+                   this.board.spaces[x-3][y+3].getOwner()  === owner) {
+                       win = true;
+                   }
+            }
+        }
+
+        //diagonal
+        for(let x = 3; x < this.board.columns; x++){
+           for(let y = 3; y < this.board.rows; y++){
+               if (this.board.spaces[x][y].getOwner()  === owner &&
+                   this.board.spaces[x-1][y-1].getOwner()  === owner &&
+                   this.board.spaces[x-2][y-2].getOwner()  === owner &&
+                   this.board.spaces[x-3][y-3].getOwner()  === owner) {
+                       win = true;
+                   }
+           }
+        }
+        return win;
+    }
+    
+     /** 
+     * Updates game state after token is dropped. 
+     * @param   {Object}  token  -  The token that's being dropped.
+     * @param   {Object}  target -  Targeted space for dropped token.
+     */
+    updateGameState(token, target){
+        target.mark(token);
+
+        if(this.checkForWin(target)) {
+            this.gameOver(`${target.getOwner().name} wins!`)
+        } else {
+            this.switchPlayers();
+        
+            if(this.activePlayer.checkTokens()){
+                this.activePlayer.activeToken.drawHTMLToken();
+                this.ready = true;
+            } else {
+                this.gameOver('You are out of tokens....');
+            }
+    }
+  }
 }
+
+
