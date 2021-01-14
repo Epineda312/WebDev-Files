@@ -38,14 +38,3 @@ class Player{
         return this.unusedTokens[0]; 
     }
 }
-
-
-
-
-
-
-
-    //OG solution
-    // get unusedTokens(){
-    //     return this.tokens.filter(tokens.dropped = false);
-    // }

@@ -34,34 +34,37 @@ class Game{
         this.ready = true;
     };
 
-    /**
+  /**
      * Branches code, depending on what key player presses
      * @param   {Object}    e - Keydown event object
      */
-    handleKeydown(keydown){
-        if(Game.ready === true){
-            if(e.key === "ArrowRight"){
-                //Move right
-            } else if (e.key === "ArrowLeft") {
-                //Move left
+    handleKeydown(e){
+        if(this.ready){
+            if(e.key === "ArrowLeft"){
+                this.activePlayer.activeToken.moveLeft();
+            } else if (e.key === "ArrowRight") {
+                this.activePlayer.activeToken.moveRight(this.board.columns);
             } else if (e.key === "ArrowDown"){
-                //Play Tokent
+                this.playToken();
             }
         }   
     }
+
+    playToken(){
+        const spaces = this.board.spaces;
+        const activeToken = this.activePlayer.activeToken;
+        const targetColumn = spaces[activeToken.columnLocation];
+        let targetSpace = null;
+
+        for (let space of targetColumn) {
+            if (space.token === null) {
+                targetSpace = space;
+            }
+        }
+
+        if (targetSpace !== null){
+            Game.ready = false;
+            activeToken.drop(targetSpace);
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-//OG solution
-
-// activePlayers(){
-//     return this.players.active = true;
-// }

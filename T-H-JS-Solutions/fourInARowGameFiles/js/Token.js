@@ -12,7 +12,7 @@ class Token{
      * @return  {element}   Html element associated with token object.
      */
     get htmlToken(){
-        return this.token;
+        return document.getElementById(this.id);
     }
 
     /** 
@@ -38,7 +38,7 @@ class Token{
      * Moves html token one column to left.
      */
     moveLeft(){
-      if(columnLocation > 0){
+      if(this.columnLocation > 0){
         this.htmlToken.style.left = this.offsetLeft - 76;
         this.columnLocation -= 1;
       }
@@ -60,12 +60,11 @@ class Token{
      * @param   {Object}   target - Targeted space for dropped token.
      * @param   {function} reset  - The reset function to call after the drop animation has completed.
      */
-     drop(target, reset){
-        this.htmlToken.dropped = true;
+    drop(target, reset) {
+        this.dropped = true;
         
         $(this.htmlToken).animate({
             top: (target.y * target.diameter)
         }, 750, 'easeOutBounce', reset);
-        
-    }
+	}
 }
