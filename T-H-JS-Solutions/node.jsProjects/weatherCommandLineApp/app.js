@@ -1,10 +1,8 @@
-// Problem: We need a simple way to look at a user's badge count and JavaScript points
-// Solution: Use Node.js to connect to Treehouse's API to get profile information to print out
+const weather = require('./weather');
 
-//const profile = require('./profile.js'); .js extension is optional
-const profile = require('./profile');
-const users = process.argv.slice(2);
+const query = process.argv.slice(2).join(' ');
 
-users.forEach(profile.get);
+//query: 90201
+//query: Los Angeles
 
-
+weather.get(query);
