@@ -13,7 +13,126 @@
 </head>
 
 <body>
-    <!-- <div class="container-fluid">
+    <h1 class="display-1 text-center text-primary">Navbars</h1>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
+        <a href="#" class="navbar-brand ps-3">Navbar</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#expandme">
+            <span class=" navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="expandme">
+            <div class="navbar-nav">
+                <a href="Home" class="nav-item nav-link">Home</a>
+                <a href="About" class="nav-item nav-link">About</a>
+                <a href="Contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <form class="d-flex ms-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="display-1 text-center text-primary">Icons <svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                height="1em" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                <path
+                    d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z" />
+                <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z" />
+            </svg></h1>
+        <button class="btn btn-sm btn-danger mb-3">Delete<svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                height="1em" fill="currentColor" class="bi bi-trash " viewBox="0 0 16 16">
+                <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+            </svg></button>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="1.5em"
+                                height="1.5em" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="search">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1 class="display-1 text-center text-primary mb-3">Utilities</h1>
+            <div class="row">
+                <div class="col-md-4 border rounded border-success shadow">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, expedita laboriosam consequatur
+                    eum in reprehenderit eius voluptas tempora atque earum id asperiores nesciunt placeat numquam eos
+                    laborum dolor rem architecto.
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary p-0">Padding 0</button>
+            <button class="btn btn-primary p-1">Padding 1</button>
+            <button class="btn btn-primary p-2">Padding 2</button>
+            <button class="btn btn-primary p-3">Padding 3</button>
+            <button class="btn btn-primary p-4">Padding 4</button>
+            <button class="btn btn-primary p-5">Padding 5</button>
+        </div>
+        <div class="my-5">
+            <button class="btn btn-primary p-0 pt-5">Padding Top</button>
+            <button class="btn btn-primary p-0 ps-5">Padding Left</button>
+            <button class="btn btn-primary p-0 pb-5">Padding Bottom</button>
+            <button class="btn btn-primary p-0 pe-5">Padding Right</button>
+            <button class="btn btn-primary p-0 px-5">Padding X</button>
+            <button class="btn btn-primary p-0 py-5">Padding Y</button>
+        </div>
+        <button class="btn btn-danger p-0 p-sm-1 p-md-2 p-lg-3 p-xl-5 mb-3">I CHANGE</button>
+    </div>
+    <div class=" container">
+        Hic est praesentium, fuga consectetur itaque voluptatum laudantium, ut dolorum, tempora provident
+        laborum
+        doloremque labore facilis eaque modi nulla neque quos amet possimus sed quibusdam maiores. Harum
+        minus accusamus
+        expedita.
+        Quod quos, eum odit id fuga, delectus illo placeat odio aperiam quibusdam reprehenderit veritatis
+        exercitationem, fugiat molestiae in totam iusto provident nobis nam? Fugit beatae sequi magnam ea
+        laudantium
+        nisi.
+        Ab, autem aut at dolorem, suscipit aliquid magni deleniti ea in cumque voluptatibus dolores illum
+        voluptas
+        tempore voluptatem perspiciatis accusantium asperiores corrupti omnis. Corrupti nesciunt sapiente
+        dolorum
+        quibusdam perspiciatis saepe?
+        Expedita voluptatem qui tempora cupiditate non officiis voluptate temporibus esse consequatur nobis
+        optio magni
+        quos, earum cum rerum suscipit laudantium ducimus totam facere reprehenderit accusantium facilis
+        nulla! Illum,
+        minima nihil.
+        Iste eveniet est velit inventore sint vitae excepturi quas minus perspiciatis veritatis possimus,
+        asperiores
+        nobis distinctio ea quis vel doloribus temporibus? Voluptate recusandae fugiat ex, nisi ipsa
+        molestias! Ipsam,
+        laboriosam.
+        Expedita ratione amet quam nemo! Ducimus ullam commodi incidunt adipisci et itaque iste expedita
+        magnam quia,
+        laudantium, deleniti quaerat quis maiores mollitia error eligendi eos, corrupti vero! Accusamus,
+        maiores a!
+        Nemo mollitia corporis rem placeat similique nesciunt a, corrupti, fuga beatae maiores voluptate
+        quis earum
+        perferendis. Fugiat, possimus molestias adipisci quam deserunt similique excepturi unde consequatur
+        eligendi
+        aliquid sed error!
+        Inventore sunt suscipit porro officia at nostrum dolores modi voluptas id accusamus, aut ipsam
+        consectetur totam
+        quas ducimus! Voluptatum nihil consequatur fuga nulla dolorum perspiciatis error culpa
+        necessitatibus aperiam
+        at.
+    </div>
+
+
+    <div class="container-fluid">
         <h1 class="display-1 text-center text-primary">The Grid System</h1>
         <div class="row">
             <div class="col-6 bg-success">I AM 6 UNITS</div>
@@ -39,36 +158,40 @@
         <h2 class="display-4 text-center text-primary">Responsive Grid </h2>
         <div class="row">
             <div class="col-md-6 col-xl-3 bg-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio facilis
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio
+                facilis
                 non ex dicta voluptas, saepe consequuntur iusto laudantium quasi quos ipsum debitis. Enim
                 architecto perferendis beatae aliquid.
             </div>
             <div class="col-md-6 col-xl-3 bg-success">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio facilis
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio
+                facilis
                 non ex dicta voluptas, saepe consequuntur iusto laudantium quasi quos ipsum debitis. Enim
                 architecto perferendis beatae aliquid.
             </div>
             <div class="col-md-6 col-xl-3 bg-info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio facilis
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio
+                facilis
                 non ex dicta voluptas, saepe consequuntur iusto laudantium quasi quos ipsum debitis. Enim
                 architecto perferendis beatae aliquid.
             </div>
             <div class="col-md-6 col-xl-3 bg-success">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio facilis
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos laborum optio
+                facilis
                 non ex dicta voluptas, saepe consequuntur iusto laudantium quasi quos ipsum debitis. Enim
                 architecto perferendis beatae aliquid.
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4 ">
                 <img class="img-fluid"
                     src="C:\Users\S\Desktop\WDCRe\Bootstrap\08_Bootstrap\08_Bootstrap\GRID\imgs\img4.jpg" alt="">
             </div>
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4">
                 <img class="img-fluid"
                     src="C:\Users\S\Desktop\WDCRe\Bootstrap\08_Bootstrap\08_Bootstrap\GRID\imgs\img5.jpg" alt="">
             </div>
-            <div class="col-xl-4 col-md-6">
+            <div class="col-xl-4 col-md-4">
                 <img class="img-fluid"
                     src="C:\Users\S\Desktop\WDCRe\Bootstrap\08_Bootstrap\08_Bootstrap\GRID\imgs\img6.jpg" alt="">
             </div>
@@ -126,7 +249,7 @@
             </div>
         </div>
     </div>
-    </div> -->
+    </div>
     <div class="container">
         <h1 class="display-4 text-center text-primary">Forms</h1>
         <form action="#nowhere">
@@ -173,8 +296,7 @@
                 <label for="tos" class="form-check-label">Sign Me Up</label>
             </div>
 
-
-            <button type="submit" class="btn btn-success">Register</button>
+            <button type="submit" class="btn btn-success mb-5">Register</button>
         </form>
     </div>
 
