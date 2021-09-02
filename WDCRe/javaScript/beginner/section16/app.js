@@ -173,3 +173,138 @@
 // else if (day === 7){
 //     console.log("SUNDAY")
 // }
+
+//---------------------------------------------------------//
+
+//Loops
+
+// For Loops
+
+// console.log(1)
+// console.log(2)
+// console.log(3)
+// console.log(4)
+// console.log(5)
+// console.log(6)
+// console.log(7)
+// console.log(8)
+// console.log(9)
+// console.log(10)
+
+// for (let num = 1; num <= 10; num += 1) {
+//     console.log(num);
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(i);
+// }
+
+// for (let i = 1; i <= 20; i += 2) {
+//     console.log(i)
+// }
+
+// for (let i = 100; i >= 0; i -= 10) {
+//     console.log(i);
+// }
+// for (let i = 25; i >= 0; i -= 5) {
+//     console.log(i);
+// }
+
+//Looping Over arrays
+// const animals = [
+//     'lions',
+//     'tigers',
+//     'bears'
+// ];
+
+// for (let i = 0; i < animals.length; i++) {
+//     console.log(i, animals[i]);
+// }
+
+// for (let i = animals.length - 1; i >= 0; i--) {
+//     console.log(i, animals[i]);
+// }
+
+
+// const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"]; //
+
+// for (let i = 0; i < people.length; i++) {
+//     console.log(i, people[i].toUpperCase());
+// }
+
+// // Nested FOR Loops
+// let str = 'LOL';
+// for (let i = 0; i <= 4; i++) {
+//     console.log("Outer:", i);
+//     for (let j = 0; j < str.length; j++) {
+//         console.log(' Inner:', str[j]);
+//     }
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`i is: ${i}`);
+//     for (let j = 1; j < 4; j++) {
+//         console.log(`   j is:${j}`);
+//     }
+// }
+
+// const seatingChart = [
+//     ['Kristen', 'Erik', 'Namita'],
+//     ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+//     ['Yuma', 'Sakura', 'Jack', 'Erika']
+// ];
+
+// for (let i = 0; i < seatingChart.length; i++) {
+//     const row = seatingChart[i];
+//     console.log(`ROW #${i + 1} `)
+//     for (let j = 0; j < row.length; j++) {
+//         console.log(row[j])
+//     }
+// }
+
+//While Loops
+
+// let num = 0;
+// while (num <= 10) {
+//     console.log(num);
+//     num++;
+// }
+
+// let count = 0
+// while (count < 10) {
+//     count++
+//     console.log(count)
+// }
+
+// const SECRET = "lion";
+
+// let guess = prompt("Guess the secret animal....").toLowerCase();
+// while (guess !== SECRET) {
+//     guess = prompt("Guess the secret animal....").toLowerCase();
+// }
+// console.log("Congrats you got the secret animal correct!")
+
+//The BREAK Keyword
+// let input = prompt("Hey, say something!")
+// while (true) {
+//     input = prompt(input);
+//     if (input.toLowerCase() === "stop copying me") {
+//         console.log("break")
+//         break;
+//     }
+// }
+// console.log("Ok you win!")
+
+// for (let i = 0; i < 1000; i++) {
+//     console.log(i);
+//     if (i === 100) {
+//         break;
+//     }
+// }
+
+// for (let i = 0; i < 1000; i++) {
+//     console.log(i);
+//     if (i === 100) break;
+// }
+
+// The Guessing Game Example
