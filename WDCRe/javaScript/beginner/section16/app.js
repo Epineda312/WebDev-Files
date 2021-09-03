@@ -308,3 +308,156 @@
 // }
 
 // The Guessing Game Example
+
+// let max = parseInt(prompt("Enter the maximum Number!"));
+// while (!max) {
+//     max = parseInt(prompt("Enter a valid number"));
+// }
+// const targetNum = Math.floor(Math.random() * max) + 1;
+// let attempts = 1;
+
+// let guess = parseInt(prompt("Enter your first guess!"));
+// while (parseInt(guess) !== targetNum) {
+//     if (guess === 'q') break;
+//     attempts++;
+//     if (guess > targetNum) {
+//         guess = prompt("Too high! Enter a new guess");
+//     } else {
+//         guess = prompt("Too low! Enter a new guess");
+
+//     }
+// }
+
+// if (guess === 'q') {
+//     console.log("OK, YOU QUIT")
+// } else {
+//     console.log(`Congrats! You guessed ${targetNum} correctly in ${attempts} attempts`);
+// }
+
+// For Of Loop
+
+// const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics',]
+
+// for (let i = 0; i < subreddits.length; i++) {
+//     console.log(`Visit reddit.com/r/${subreddits[i]}`)
+// }
+
+// for (let sub of subreddits) {
+//     console.log(`Visit reddit.com/r/${sub}`)
+// }
+
+// const seatingChart = [
+//     ['Kristen', 'Erik', 'Namita'],
+//     ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+//     ['Yuma', 'Sakura', 'Jack', 'Erika']
+// ];
+
+// for (let i = 0; i < seatingChart.length; i++) {
+//     const row = seatingChart[i];
+//     console.log(`ROW #${i + 1} `)
+//     for (let j = 0; j < row.length; j++) {
+//         console.log(row[j])
+//     }
+// }
+
+// for (let row of seatingChart) {
+//     for (let student of row) {
+//         console.log(`Name: ${student}`)
+//     }
+// }
+
+// for (let char of "Hello-world") {
+//     console.log(`Character: ${char}`)
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+
+// for (let num of numbers) {
+//     console.log(num * num)
+// }
+
+//Iterating over objects
+// const testScores = {
+//     keenan: 80,
+//     damon: 67,
+//     kim: 89,
+//     shawn: 91,
+//     marlon: 72,
+//     dwayne: 77,
+//     nadia: 83,
+//     elvira: 97,
+//     diedre: 81,
+//     vonnie: 60
+// }
+
+// // for (let person in testScores) {
+// //     console.log(`${person} scored ${testScores[person]}`);
+// // }
+// // console.log(Object.keys(testScores));
+// // console.log(Object.values(testScores));
+// // console.log(Object.entries(testScores));
+
+// let total = 0;
+// let scores = Object.values(testScores)
+
+// for (let score of scores) {
+//     total += score;
+// }
+// console.log(total / scores.length)
+
+//ToDo List
+
+// let input = prompt('What would you like to do?');
+// const todos = ['Collect Eggs', 'Clean Litter Box'];
+
+// while (input.toLocaleLowerCase() !== 'quit' && input.toLocaleLowerCase() !== 'q') {
+//     if (input === 'list') {
+//         console.log('**********');
+//         for (let i = 0; i < todos.length; i++) {
+//             console.log(`${i}: ${todos[i]}`);
+//         }
+//         console.log('**********');
+//     } else if (input.toLocaleLowerCase() === 'new') {
+//         const newTodo = prompt('Ok, what is the new todo?');
+//         todos.push(newTodo);
+//         console.log(`"${newTodo}" added to the list.`);
+//     } else if (input.toLocaleLowerCase() === 'delete') {
+//         const index = parseInt(prompt("Ok, enter index to delete"));
+//         if (!Number.isNaN(index)) {
+//             const deleted = todos.splice(index, 1);
+//             console.log(`Ok, deleted "${deleted}"`);
+//         } else {
+//             console.log('Unknown Index');
+//         }
+//     }
+//     input = prompt('What would you like to do?');
+// }
+// console.log("OK, YOU QUIT THE APP");
+
+
+// let input = prompt('What would you like yo do?');
+// const todos = ['Serve', 'Bink'];
+
+// while (input !== 'quit' && input !== 'q') {
+//     if (input === 'list') {
+//         console.log('******************')
+//         for (let i = 0; i < todos.length; i++) {
+//             console.log(`${i}: ${todos[i]}`)
+//         }
+//         console.log('***************');
+//     } else if (input === 'new') {
+//         newTodo = prompt("What would you like to add?");
+//         todos.push(newTodo)
+//         console.log(`You added "${newTodo} to the list.`);
+//     } else if (input === 'delete') {
+//         const index = parseInt(prompt("What index would you like to delete?"));
+//         if (!Number.isNaN(index)) {
+//             const deleted = todos.splice(index, 1);
+//             console.log(`OK, ${deleted} was deleted from the list.`);
+//         } else {
+//             console.log('Unknown index')
+//         }
+//     }
+//     input = prompt("What do you want to do?")
+// }
+// console.log('OK, QUIT THE APP');
