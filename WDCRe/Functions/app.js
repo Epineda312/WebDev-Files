@@ -313,3 +313,188 @@
 // }
 
 //Try/Catch
+
+// try {
+//     hello.toUpperCase();
+// } catch {
+//     console.log('Error!');
+// }
+// hello.toUpperCase(); //Produces Error, all code stops here
+//with a try catch the error is handled and the code goes on to print 'AFTER'
+// console.log('AFTER');
+
+// function yell(msg) {
+//     try {
+//         console.log(msg.toUpperCase().repeat(3));
+//     } catch (e) {
+//         // console.log(e);
+//         console.log('Entered an invalid type');
+//     }
+// }
+
+//The forEach method
+
+// const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// nums.forEach(function (n) {
+//     console.log(n * n)
+//     //print:81,64,49,36,25,16,9,4,1
+// });
+
+// nums.forEach(function (num) {
+//     if (num % 2 === 0) {
+//         console.log(num)
+//         //prints 8,6,4,2
+//     }
+// });
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// function print(element) {
+//     console.log(element)
+// }
+// print(numbers[0])
+// print(numbers[1])
+// numbers.forEach(print);
+
+// for (let el of numbers) {
+//     console.log(el);
+// }
+
+// numbers.forEach(function (el) {
+//     if (el % 2 === 0) {
+//         console.log(el);
+//     }
+// })
+
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12
+//     }
+// ]
+
+// movies.forEach(function (movie) {
+//     console.log(`${movie.title} - ${movie.score}/100`)
+// })
+
+
+//The Map Method
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// const doubles = numbers.map(function (num) {
+//     return num * 2
+// })
+// console.log(doubles);
+
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12
+//     }
+// ]
+
+// const titles = movies.map(function (movie) {
+//     return movie.title
+// });
+
+// const scores = movies.map(function (movie) {
+//     return movie.score
+// });
+
+// console.log(titles);
+// console.log(scores);
+
+// // DO NOT ALTER THE FOLLOWING CODE:
+// const fullNames = [{ first: 'Albus', last: 'Dumbledore' }, { first: 'Harry', last: 'Potter' }, { first: 'Hermione', last: 'Granger' }, { first: 'Ron', last: 'Weasley' }, { first: 'Rubeus', last: 'Hagrid' }, { first: 'Minerva', last: 'McGonagall' }, { first: 'Severus', last: 'Snape' }];
+
+// // Write your code here
+// const firstNames = fullNames.map(function (names) {
+//     return names.first;
+// })
+// console.log(firstNames);
+
+//Arrow Functions
+
+// const add = function(x,y){
+//     return x +y;
+// }
+
+// const add = (x, y) => {
+//     return (x + y);
+// }
+
+// const square = num => {
+//     return (num * num);
+// }
+
+// // const rollDie = () => {
+// //     return Math.floor(Math.random() * 6) + 1
+// // }
+// const greet = (name) => {
+//     return `Hey ${name}!`
+// }
+
+//Parens are optional if there's only one parameter:
+// const square = x => {
+//     return x * x;
+// }
+
+// //Use empty parens for function w/ no parameters 
+// const singASong = () => {
+//     return "LA LA LAAAAA LA LA LAAAAA LA ";
+// }
+
+//Implicit Return
+//All These Functions Do The Same Thing
+// const isEven = function (num) { // regular function expression
+//     return num % 2 === 0;
+// }
+// const isEven = (num) => { // arrow function with parens around param
+//     return num % 0 === 0;
+// }
+// const isEven = num => { //no parens around param
+//     return num % 2 ==== 0;
+// }
+// const isEven = num => ( // implicit return
+//     num % === 0
+// );
+// const isEven = num => num % 2 === 0; // one-liner implicit return
+
+// const rollDie = () => {
+//     return Math.floor(Math.random() * 6) + 1
+// }
+
+// const rollDie = () => (
+//     Math.floor(Math.random() * 6) + 1
+// )
+
+// const add = (a, b) => {
+//     return a + b;
+// }
+
+//implicit return version
+const add = (a, b) => a + b;
