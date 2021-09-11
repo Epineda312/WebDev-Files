@@ -258,25 +258,6 @@
 //     }
 // }
 
-
-
-//Chuckles HW
-// function polynomialEvaluation(x) {
-//     x = parseFloat(prompt('Enter a number for the equation'));
-//     const result = (2.1 * x ** 3 + 3.7 * x ** 2 - 3);
-//     console.log(`f(${x}) = ${result}`);
-// }
-// polynomialEvaluation();
-
-// function finiteSum(n) {
-//     n = parseInt(prompt('Enter a number for the equation'));
-//     const result = (n * (n + 1) / 2);
-//     console.log(`The sum from 1 to ${n} is ${result}`);
-// }
-// finiteSum()
-
-
-
 // 'this' Keyword
 // const person = {
 //     first: 'Airic',
@@ -497,4 +478,217 @@
 // }
 
 //implicit return version
-const add = (a, b) => a + b;
+// const add = (a, b) => a + b;
+
+//Arrow functions wrapup - Array example
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12
+//     }
+// ]
+
+//regular function expression
+// const newMovies = movies.map(function (movie) {
+//     return `${movie.title} - ${movie.score / 10}`
+// })
+
+// // implicit return version
+// const newMovies = movies.map(movie => (
+//     `${movie.title} - ${movie.score / 10}`
+// ));
+// //implict return on one line
+// const newMovies = movies.map(movie => (`${movie.title} - ${movie.score / 10}`));
+
+
+// setTimeout and setInterval
+// setTimeout(() => {
+//     console.log("HELLO!!!");
+// }, 3000) // Waits 3 seconds than prints HELLO!!! in the console
+
+// console.log('Hello');
+// setTimeout(() => {
+//     console.log('Are you still there?')
+// }, 3000); //Prints Hello immediately, prints are you still there after 3 seconds
+
+// console.log('Hello');//Prints immediately
+// setTimeout(() => {
+//     console.log('Are you still there?')
+// }, 3000);//Prints after 3 seconds
+// console.log('GOODBYE')//Prints immediately
+
+// const id = setInterval(() => {
+//     console.log(Math.random());
+// }, 1000); // Prints a random number every second
+
+//The Filter Method
+// const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// const odds = nums.filter(n => {
+//     return n % 2 === 1; //Our callback returns true or false
+//     //If it returns true, n is added to the filtered array
+// })
+// //[9, 7, 5, 3, 1]
+
+// const smallNums = nums.filter(n => n < 5);
+// //[4, 3, 2, 1]
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+// numbers.filter(n => {
+//     return n < 10;
+// });
+
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100,
+//         year: 2001
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90,
+//         year: 2000
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55,
+//         year: 1900
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12,
+//         year: 1814
+//     },
+//     {
+//         title: 'Notting Hill',
+//         score: 25,
+//         year: 1999
+//     }
+// ]
+
+// const goodMovies = movies.filter(movie => {
+//     return movie.score > 80
+// })
+
+// const goodMovies = movies.filter(m => m.score > 80);
+// const goodTitles = goodMovies.map(m => m.title);
+
+// movies.filter(m => m.score > 80).map(m => m.title);
+
+// const badMovies = movies.filter(m => m.score < 55);
+// const recentMovies = movies.filter(m => m.year >= 1999);
+
+//Filter Excercise
+/*Write a function called (validUserNames) that accepts and array of usernames (strings).
+It should return a new array containing only the usernames that are less than 10 characters.
+for example: validUserNames['mark','Staceysmom1978','q131232112','carrie98','MoanaFan'];
+// => ['mark', 'carrie98', 'MoanaFan'];
+ */
+//Solution
+// function validUserNames(usernames){
+//     return usernames.filter(username => {
+//         return username.length < 10;
+//     });
+// }
+
+//SOME and EVERY Methods
+//----------------SOME METHOD-----------------------
+//Similar to EVERY, but returns true if ANY of the array elements
+//Pass the test function
+// const words = ['dog', 'jello', 'log', 'cupcake', 'bag', 'wag'];
+
+// //Are there any words longer than 4 characters?
+// words.some(word => {
+//     return word.length > 4;
+// }) // true
+
+// //Do any words start with 'Z'?
+// words.some(word => word[0] === 'Z'); //false
+
+// //Do any words contain 'cake'?
+// words.some(w => w.includes('cake')) //true
+
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100,
+//         year: 2001
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90,
+//         year: 2000
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55,
+//         year: 1900
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12,
+//         year: 1814
+//     },
+//     {
+//         title: 'Notting Hill',
+//         score: 25,
+//         year: 2016
+//     }
+// ]
+
+// movies.some(movie => movie.year > 2015); //true
+
+//---------------EVERY METHOD-----------------
+//Tests whether all elements in the array pass the provided function. It returns a boolean value.
+
+// const words = ['dog', 'dig', 'log', 'bag', 'wag'];
+
+// words.every(word => {
+//     return word.length === 3;
+// }) // true
+
+// words.every(word => word[0] === 'd')//false
+
+// words.every(w => {
+//     let last_letter = w[w.length - 1];
+//     return last_letter === 'g';
+// })//true
+
+// const exams = [80, 90, 98, 92, 78, 70, 100];
+// exams.every(score => score >= 75);//false
+
+//Define a function called allEvens that accepts a single array pf numbers/ Of the array contains all even numbers, return true. Otherwise, return false. Use some or every to help you do this.
+// function allEvens(arr) {
+//     return arr.every(n => n % 2 == 0);
+// }
+
+//Summing an array
+// [3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// });
+
+const prices = [9.99, 1.50, 19.99, 49.99, 30.50];
+
+// let total = 0;
+// for (let price of prices) {
+//     total += price;
+// }
+// console.log(`The total is ${total}`);
+
+// prices.reduce((total, price) => {
+//     return total + price;
+// });
+
+// const total = prices.reduce((total, price) => total + price);
