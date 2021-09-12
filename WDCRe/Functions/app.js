@@ -692,3 +692,93 @@ const prices = [9.99, 1.50, 19.99, 49.99, 30.50];
 // });
 
 // const total = prices.reduce((total, price) => total + price);
+
+// const minPrice = prices.reduce((min, price) => {
+//     if (price < min) {
+//         return price;
+//     }
+//     return min;
+// });
+
+// const movies = [
+//     {
+//         title: 'Alien',
+//         score: 100,
+//         year: 2001
+//     },
+//     {
+//         title: 'Baker2G',
+//         score: 90,
+//         year: 2000
+//     },
+//     {
+//         title: 'Stand By Me',
+//         score: 55,
+//         year: 1900
+//     },
+//     {
+//         title: 'Parasite',
+//         score: 12,
+//         year: 1814
+//     },
+//     {
+//         title: 'Notting Hill',
+//         score: 25,
+//         year: 2016
+//     }
+// ]
+
+// const highestRated = movies.reduce((bestMovie, currMovie) => {
+//     if (currMovie.score > bestMovie) {
+//         return currMovie;
+//     }
+//     return bestMovie;
+// });
+
+// const evens = [2, 4, 6, 8];
+// evens.reduce((sum, num) => sum + num); //20
+// evens.reduce((sum, num) => sum + num, 100); //Second argument is the inital value - output here would be 120.
+
+
+//-----------Arrow functions and 'this'
+// const person = {
+//     firstName: 'Airik',
+//     lastName: 'P3A',
+//     fullName: function () {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// } //person.fullName() returns 'Airik P3A'
+
+// const person = {
+//     firstName: 'Airik',
+//     lastName: 'P3A',
+//     fullName: () => {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }// returns undefined undefined
+
+// const person = {
+//     firstName: 'Airik',
+//     lastName: 'P3A',
+//     fullName: () => {
+//         return `${this.firstName} ${this.lastName}` //this in arrow functions behaves differently. Here this.firstName is undefined. It does not refer to the object
+//     },
+//     shoutName: function () {
+//         setTimeout(() => {
+//             console.log(this.fullName())
+//         }, 3000)
+//     }
+// } // shoutName returns undefined undefined
+
+// const person = {
+//     firstName: 'Airik',
+//     lastName: 'P3A',
+//     fullName: function () {
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     shoutName: function () {
+//         setTimeout(() => {
+//             console.log(this.fullName())
+//         }, 3000)
+//     }
+// }
